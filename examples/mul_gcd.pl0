@@ -1,0 +1,32 @@
+const m=12, n=18;
+var x,y,z,f,l;
+procedure multiply;
+	var a,b;
+	begin a:=x; b:=y; z:=0;
+	while b>0 do
+	begin
+	     if odd b then z:=z+a;
+	     a:=2*a; b:=b/2;
+	end;
+	write z;
+end;
+procedure LCM;
+       procedure gcd;
+	var g;
+	begin f:=x; g:=y;
+	     while f != g do
+	     begin if f < g then g:=g-f;
+		 if g < f then f:=f-g;
+	     end;
+	     write f;
+              end;
+       begin
+	call gcd;
+       	call multiply;
+       	l:=z/f;
+       end;
+begin
+	x:=m; y:=n; 
+	write x; write y;
+	call LCM; write l;
+end.

@@ -1,0 +1,28 @@
+const m=7;
+var i,k[7];
+procedure sort;
+	var i,j,t;
+	begin i:=0;
+	     while i<m-1 do begin
+		j:=i+1;
+		while j<m do begin
+		    if k[i]>k[j] then begin t:=k[i]; k[i]:=k[j]; k[j]:=t end;
+		    j:=j+1
+		end;
+		i:=i+1
+	      end
+	end;
+begin
+	k[0]:=3; k[1]:=2; k[2]:=7; k[3]:=5; k[4]:=1; k[5]:=6; k[6]:=4; 
+	i:=0;
+	while i<m do begin
+		write k[i];
+		i:=i+1
+		end;
+	call sort;
+	i:=0;
+	while i<m do begin
+		write k[i];
+		i:=i+1
+		end;
+end.

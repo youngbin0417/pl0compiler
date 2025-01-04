@@ -1,0 +1,15 @@
+const m=7;
+var n,k[7],sum;
+procedure fibo;
+	var i;
+	begin i:=2; sum:=2;
+	     k[0]:=1; k[1]:=1;
+	     while i<n do begin
+		k[i]:=k[i-2]+k[i-1];
+		sum:=sum+k[i];
+		i:=i+1
+	             end;
+	end;
+begin
+	n:=m; call fibo;
+end.
